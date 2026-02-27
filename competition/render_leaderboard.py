@@ -48,7 +48,9 @@ def main():
     lines.append("# 🏆 Bioink GNN Challenge Leaderboard\n\n")
     lines.append("This leaderboard is **auto-updated** when a submission PR is scored. ")
     lines.append("For interactive search and filters, enable GitHub Pages and open **/docs/leaderboard.html**.\n\n")
-    lines.append("**Metric:** Normalized MAE (NMAE) - Lower is better\n\n")
+    from datetime import timezone
+    lines.append(f"**Metric:** Normalized MAE (NMAE) - Lower is better  \n")
+    lines.append(f"*Last Updated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S')} UTC*\n\n")
     
     lines.append("| Rank | Team | Model Type | NMAE | NMAE % | Date (UTC) | Notes |\n")
     lines.append("|---:|---|---|---:|---:|---|---|\n")

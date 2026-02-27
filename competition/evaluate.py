@@ -44,7 +44,14 @@ def main():
             print(f"SCORE={scores['combined_nmae']:.8f}")
     
     except Exception as e:
-        print(f"ERROR: {e}", file=sys.stderr)
+        if args.format == 'markdown':
+            print(f"## ❌ Evaluation Failed\n\n**Error:** `{e}`\n\nPlease check that your submission matches `sample_submission.csv` (correct IDs and columns).")
+        elif args.format == 'json':
+            import json
+            print(json.dumps({"error": str(e)}))
+        else:
+            print(f"ERROR: {e}", file=sys.stderr)
+        
         sys.exit(1)
 
 

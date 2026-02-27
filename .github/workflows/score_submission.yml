@@ -223,11 +223,20 @@ jobs:
             const fs = require('fs');
             let body = '## Submission Scoring System\n\n';
             
+            // Check if eval failed based on steps object outcome
+            let is_success = "${{ steps.score.outcome }}" === "success";
+            
             if (fs.existsSync('score_report.md')) {
-                body += fs.readFileSync('score_report.md', 'utf8');
-                body += '\n\n✅ **Score recorded!** Check the [Leaderboard](../blob/master/leaderboard/leaderboard.md).\n\n*This PR has been automatically closed. Your submission files are NOT stored in the repository — only your score appears on the leaderboard.*';
+                const report = fs.readFileSync('score_report.md', 'utf8');
+                body += report;
+                
+                if (is_success) {
+                   body += '\n\n✅ **Score recorded!** Check the [Leaderboard](https://vinitsingroha.github.io/GNN-Challenge/leaderboard.html).\n\n*This PR has been automatically closed. Your submission files are NOT stored in the repository.*';
+                } else {
+                   body += '\n\n❌ **Scoring Failed.** Please check the error above and fix your submission.';
+                }
             } else {
-                body += '❌ **Scoring Failed.** Check the logs. (Did you already submit? One submission per user.)';
+                body += '❌ **Scoring Failed.** Critical error (Did you already submit? One submission per user, or incorrect file placement).';
             }
             
             github.rest.issues.createComment({
