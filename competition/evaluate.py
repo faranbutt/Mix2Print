@@ -16,13 +16,6 @@ def format_score_result(scores: dict) -> str:
     """Format scores as a readable message."""
     msg = "## [Evaluation Results]\n\n"
     
-    msg += "### Individual Target Scores\n\n"
-    msg += f"| Target | MAE | NMAE | NMAE % |\n"
-    msg += f"|--------|-----|------|--------|\n"
-    msg += f"| **Pressure** | {scores['pressure_mae']:.2f} kPa | {scores['pressure_nmae']:.6f} | {scores['pressure_nmae']*100:.2f}% |\n"
-    msg += f"| **Temperature** | {scores['temperature_mae']:.2f} °C | {scores['temperature_nmae']:.6f} | {scores['temperature_nmae']*100:.2f}% |\n"
-    msg += f"| **Speed** | {scores['speed_mae']:.2f} mm/s | {scores['speed_nmae']:.6f} | {scores['speed_nmae']*100:.2f}% |\n"
-    
     msg += f"\n### [Combined Score]\n\n"
     msg += f"**NMAE: {scores['combined_nmae']:.6f}** ({scores['combined_pct']:.2f}%)\n\n"
     msg += f"*Lower is better. This is the official ranking metric.*\n"
