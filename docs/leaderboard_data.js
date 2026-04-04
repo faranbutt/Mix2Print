@@ -81,10 +81,10 @@ window.LEADERBOARD_DATA = [
     "team": "emmanuel_owusu",
     "github_user": "emmakowu3579-ui",
     "model_type": "participant",
-    "combined_nmae": "0.06470063413559034",
-    "pressure_nmae": "0.09759959044117647",
-    "temperature_nmae": "0.05448961619152047",
-    "speed_nmae": "0.04201269577407407",
+    "combined_nmae": "0.0647006341355903",
+    "pressure_nmae": "0.0975995904411764",
+    "temperature_nmae": "0.0544896161915204",
+    "speed_nmae": "0.042012695774074",
     "notes": "GitHub Submission"
   },
   {
@@ -96,6 +96,17 @@ window.LEADERBOARD_DATA = [
     "pressure_nmae": "0.1020944480225044",
     "temperature_nmae": "0.0632244329678362",
     "speed_nmae": "0.0413894686481481",
+    "notes": "GitHub Submission"
+  },
+  {
+    "timestamp_utc": "2026-04-04T23:11:56.050776Z",
+    "team": "nourmaj",
+    "github_user": "NoorMajdoub",
+    "model_type": "participant",
+    "combined_nmae": "0.13585997745596537",
+    "pressure_nmae": "0.14447406875394386",
+    "temperature_nmae": "0.20695395278691517",
+    "speed_nmae": "0.05615191082703703",
     "notes": "GitHub Submission"
   }
 ];
