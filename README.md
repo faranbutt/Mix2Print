@@ -5,6 +5,8 @@ A challenge for predicting 3D bioprinting parameters using Graph Neural Networks
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+### Leaderboard: https://vinitsingroha.github.io/Mix2Print/leaderboard.html
+
 ---
 
 ## 🧪 What is Bioprinting?
